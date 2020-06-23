@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'quote.dart';
+import 'quote_card.dart';
 
 void main() =>  runApp(MaterialApp(
   home: QuoteList(),
@@ -27,35 +28,12 @@ class _QuoteListState extends State<QuoteList> {
     Quote(author:'Oscar W', text:'The truth is rarely pure and never simple')
   ];
 
+  // not in need anymore, new class QuoteCard returns the widget tree
+  /*
   Widget quoteTemplate(quote){
-    return Card(
-      margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Text(
-              quote.text,
-              style: TextStyle(
-                fontSize: 18.0,
-                color: Colors.grey[600],
-              ),
-            ),
-            SizedBox(height: 6.0),
-            Text(
-              quote.author,
-              style: TextStyle(
-                fontSize: 14.0,
-                color: Colors.grey[800],
-              )
-            ),
-          ],
-        ),
-      ),
-    );
+    return QuoteCard(quote: quote);
   }
-
+  */
 
 
   @override
@@ -74,9 +52,11 @@ class _QuoteListState extends State<QuoteList> {
         //}).toList(),
         // printing a property requires to be enclosed in {}
         // children: quotes.map( (quote) => Text('${quote.text} - ${quote.author}')).toList(),
-        children: quotes.map( (quote) => quoteTemplate(quote)).toList(),
+        children: quotes.map( (quote) => QuoteCard(quote: quote)).toList(),
       ),
     );  //returns the widget tree
   }
 }
+
+
 
