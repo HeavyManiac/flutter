@@ -20,9 +20,9 @@ class _QuoteListState extends State<QuoteList> {
   */
   //List<String> quotes = [
   List<Quote> quotes = [
-    Quote(author:'Oscar W', text:'Be yourself; everyone is already taken'),
-    Quote(author:'Oscar W', text:'I Have nothing to declare'),
-    Quote(author:'Oscar W', text:'The truth is rarely')
+    Quote(author:'Oscar Wilde', text:'Be yourself; everyone else is already taken'),
+    Quote(author:'Oscar W', text:'I Have nothing to declare except my genius'),
+    Quote(author:'Oscar W', text:'The truth is rarely pure and never simple')
   ];
 
   @override
